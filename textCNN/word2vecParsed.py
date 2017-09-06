@@ -20,7 +20,7 @@ def parsed(word2vector, input):
         file = codecs.open(i, "r", encoding="utf-8").readlines()
         for line in file:
             line = line.strip()
-            line = data_helpers.clean_str(line)
+            # line = data_helpers.clean_str(line)
             for x in line.split(" "):
                 if x not in notExist:
                     notExist.append(x)
@@ -46,5 +46,5 @@ def parsed(word2vector, input):
 
 
 if __name__ == "__main__":
-    parsed("wiki_english_dim100.vec",
-           "/root/PycharmProjects/TextCNN/textCNN/data/rt-polaritydata")
+    parsed("wiki_chinese_dim100_seg.vec",
+           "/root/eric/fuzhouFilterDatass.txt")
